@@ -11,31 +11,24 @@ class Layout extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
-            <div className={styles.footWrap}>
-                <TabBar
-                    unselectedTintColor='#949494'
-                    tintColor='#33A3F4'
-                    barTintColor='white'
-                    tabBarPosition='bottom'
-                    hidden={this.state.hidden}
-                >
-                    {
-                        MENUS.map((item) => {
-                            return (
-                                <TabBar.Item
-                                    title={item.title}
-                                    icon={
-                                        <img src={item.icon}/>
-                                    }
-                                ></TabBar.Item>
-                            );
-                        })
-                    }
-
-                </TabBar>
+            <div>
+                <div className={styles.footWrap}>
+                    <TabBar
+                        unselectedTintColor='#949494'
+                        tintColor='#33A3F4'
+                        barTintColor='white'
+                        tabBarPosition='bottom'
+                        hidden={this.state.hidden}
+                    >
+                        {MENUS.map((item, index) => {
+                            return <TabBar.Item key={index} title={item.title} icon={<img alt={item.title} src={item.icon} />} />;
+                        })}
+                    </TabBar>
+                </div>
+                {this.props.children}
             </div>
+
         );
     }
 }
