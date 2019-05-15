@@ -11,8 +11,10 @@ class Layout extends Component {
     }
 
     render() {
-        return (
-            <div>
+        console.log('xxxx', this.props.location.pathname);
+        let layout = null;
+        if (this.props.location.pathname.match('/home')) {
+            layout = (
                 <div className={styles.footWrap}>
                     <TabBar
                         unselectedTintColor='#949494'
@@ -26,6 +28,12 @@ class Layout extends Component {
                         })}
                     </TabBar>
                 </div>
+            );
+        }
+
+        return (
+            <div>
+                {layout}
                 {this.props.children}
             </div>
 
