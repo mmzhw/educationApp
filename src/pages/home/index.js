@@ -3,15 +3,23 @@ import { connect } from 'dva';
 import styles from './index.less';
 import topBg from '../../assets/topbg.png';
 
+import Title from '../../components/title';
+import ListSwiper from '../../components/listSwiper';
+import SingleSwiper from '../../components/singleSwiper';
+
 @connect(({ home }) => ({ home }))
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            rankList: [{ img: '', name: '张小二', score: 100 }],
+        };
     }
 
     componentDidMount() {
         this.props.dispatch({ type: 'home/getRankList' });
+        this.props.dispatch({ type: 'home/getExchange' });
+        this.props.dispatch({ type: 'home/getIntegralRanking' });
     }
 
     render() {
@@ -31,6 +39,14 @@ class Home extends Component {
                             })
                         }
                     </div>
+                </div>
+                <div className={styles.exchange}>
+                    <Title title='积分兑换' url='/home'/>
+                    <ListSwiper dataList={ this.props.home.exchangeList} />
+                </div>
+                <div className={styles.integralRanking}>
+                    <Title title='积分排行'/>
+                    <SingleSwiper dataList={ this.props.home.integralRanking} />
                 </div>
             </div>
         );
