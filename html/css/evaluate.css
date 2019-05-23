@@ -1,0 +1,196 @@
+.evaluateRow {
+  display: flex;
+  align-items: center;
+  height: 7vh;
+  margin: 2vh 0;
+}
+
+.evaluateRow .label {
+  width: 15vw;
+  height: 100%;
+  font-size: .4rem;
+  display: flex;
+  align-items: center;
+}
+
+.evaluateRow .value {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dimensionModule input {
+  width: 100%;
+  height: 70%;
+  font-size: .4rem;
+  background: #F7F7F7;
+  border: 1px solid #D8D8D8;
+}
+
+.typeModule {
+  display: flex;
+}
+
+.typeModule .chooseType {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: .4rem;
+  margin-right: 5vw;
+}
+
+.typeModule .chooseType > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.typeModule .chooseType > div {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  margin-right: 10px;
+}
+
+.chooseStudent {
+  font-size: .3rem;
+  color: #0080FF;
+  padding: 5vw 3vw 5vw;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.studentList {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.studentList > div {
+  width: 80vw;
+  height: 80vh;
+  overflow: auto;
+  background: url("../assets/bg_tangchuan.png") center top no-repeat;
+  background-size: auto 100%;
+}
+
+.studentList > div .title {
+  color: #ffffff;
+  font-size: .6rem;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.studentList > div > p {
+  background: linear-gradient(360deg, rgba(77, 165, 251, 1) 0%, rgba(123, 188, 255, 1) 100%);
+  width: 100%;
+  height: 10%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .5rem;
+  margin-top: 35%;
+}
+
+.studentList .itemWrap {
+  height: 36vh;
+  overflow: auto;
+}
+
+.studentList > div .item {
+  width: 100%;
+  height: 5vh;
+  background: #F6F6F6;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 5%;
+  border-bottom: 1px solid #DFDDDD;
+}
+
+.studentList > div .item img {
+  width: 15px;
+  height: 15px;
+}
+
+.studentList > div .item p {
+  font-size: .5rem;
+  width: 80%;
+  text-indent: 7vw;
+}
+
+.studentList .sure {
+  font-size: .4rem;
+  background: #0F88FF;
+  width: 30vw;
+  height: 10vw;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3vh auto 0;
+  border-radius: 3vw;
+}
+
+.students {
+  height: 26vh;
+  margin: 5vw 3vw 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3vw;
+  box-sizing: border-box;
+}
+
+.students .item {
+  width: 20%;
+  height: 16vw;
+  display: flex;
+  flex-direction: column;
+  margin: 2vw 0;
+}
+
+.students .item img {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 10vw;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.students .item p {
+  padding-top: 1vw;
+  font-size: .2rem;
+  text-align: center;
+}
+
+.flower {
+  display: flex;
+}
+
+.flower img {
+  width: 8vw;
+}
+
+.save {
+  width: 80%;
+  margin: 0 auto;
+  height: 5vh;
+  background: #0F88FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: .4rem;
+}

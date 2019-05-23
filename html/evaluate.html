@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="css/evaluate.css"/>
+  <script src="js/amfe-flexible.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="backHead">
+  <a href="JavaScript:history.back(-1);"><img src="assets/left.png"/> </a>
+  <div>日常评价</div>
+  <div></div>
+</div>
+
+
+<div class="studentList" id="studentList" onclick="docCloseModule(event)">
+  <div onclick="cancelClick(event)">
+    <div class="title">批量选择学生</div>
+    <p>三年（1）班</p>
+    <div class="itemWrap">
+      <div onclick="chooseStudent(event, this, '1')" class="item"><p>1</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '2')" class="item"><p>2</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '3')" class="item"><p>3</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '4')" class="item"><p>4</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '5')" class="item"><p>5</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '6')" class="item"><p>6</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '7')" class="item"><p>7</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '8')" class="item"><p>8</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '9')" class="item"><p>9</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '10')" class="item"><p>10</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '11')" class="item"><p>11</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '12')" class="item"><p>12</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '13')" class="item"><p>13</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '14')" class="item"><p>14</p><img src='assets/icon_quan.png'/></div>
+    </div>
+    <div class="sure" onclick="closeModule()">确认</div>
+  </div>
+</div>
+
+<div class="pageWrap">
+
+
+  <div class="rowPadding evaluateRow">
+    <div class="label">维度</div>
+    <div class="value dimensionModule">
+      <input type="text" id="dimension"/>
+    </div>
+  </div>
+
+  <div class="rowPadding evaluateRow">
+    <div class="label">类型</div>
+    <div class="value typeModule">
+      <div class="chooseType" onclick="chooseType(this, 1)">
+        <img src='assets/btn_xuanzhong.png'/>行为习惯
+      </div>
+      <div class="chooseType" onclick="chooseType(this, 2)">
+        <img src='assets/icon_quan.png'/>学习习惯
+      </div>
+    </div>
+  </div>
+
+  <div class="chooseStudent" onclick="openModule(event)">批量选择学生</div>
+  <div class="students" id="students"></div>
+
+  <div class="rowPadding evaluateRow">
+    <div class="label">蓝花</div>
+    <div class="value flower">
+      <img class="blueFlower" src='assets/icon_hua_gray.png' onclick="getBule(1)"/>
+      <img class="blueFlower" src='assets/icon_hua_gray.png' onclick="getBule(2)"/>
+      <img class="blueFlower" src='assets/icon_hua_gray.png' onclick="getBule(3)"/>
+      <img class="blueFlower" src='assets/icon_hua_gray.png' onclick="getBule(4)"/>
+      <img class="blueFlower" src='assets/icon_hua_gray.png' onclick="getBule(5)"/>
+    </div>
+  </div>
+  <div class="rowPadding evaluateRow">
+    <div class="label">红花</div>
+    <div class="value flower">
+      <img class="redFlower" src='assets/icon_hua_gray.png' onclick="getRed(1)"/>
+      <img class="redFlower" src='assets/icon_hua_gray.png' onclick="getRed(2)"/>
+      <img class="redFlower" src='assets/icon_hua_gray.png' onclick="getRed(3)"/>
+      <img class="redFlower" src='assets/icon_hua_gray.png' onclick="getRed(4)"/>
+      <img class="redFlower" src='assets/icon_hua_gray.png' onclick="getRed(5)"/>
+    </div>
+  </div>
+
+  <div class="save">保存</div>
+
+</div>
+<div class="foot">
+  <a class="item" href="index.html"><img src="assets/menu1.png"/>
+    <p>首页</p></a>
+  <a class="item" href="sport.html"><img src="assets/menu2.png"/>
+    <p>体育</p></a>
+  <a class="item activeFoot" href="evaluate.html"><img src="assets/menu3hover.png"/>
+    <p>评价</p></a>
+  <a class="item" href="finalExam.html"><img src="assets/menu4.png"/>
+    <p>成绩</p></a>
+  <a class="item" href="shop.html"><img src="assets/menu5.png"/>
+    <p>商城</p></a>
+  <a class="item"><img src="assets/menu6.png"/>
+    <p>我的</p></a>
+</div>
+<script>
+  var choosedStudents = [];
+  var blueFlower = 0;
+  var redFlower = 0;
+
+  function chooseType (el, type) {
+    if (type === 1) {
+      $('.typeModule')[0].children[0].children[0].src = 'assets/btn_xuanzhong.png';
+      $('.typeModule')[0].children[1].children[0].src = 'assets/icon_quan.png';
+    } else if (type === 2) {
+      $('.typeModule')[0].children[1].children[0].src = 'assets/btn_xuanzhong.png';
+      $('.typeModule')[0].children[0].children[0].src = 'assets/icon_quan.png';
+    }
+  }
+
+  function chooseStudent (event, el, student) {
+    event.stopPropagation();
+    event.preventDefault();
+    let img = el.children[1];
+    if (img.src.match('btn_xuanzhong')) {
+      img.src = 'assets/icon_quan.png';
+      removeStudent(student);
+    } else {
+      img.src = 'assets/btn_xuanzhong.png';
+      addStudent(student);
+    }
+    console.log(choosedStudents);
+  }
+
+  function addStudent (student) {
+    choosedStudents.push(student);
+  }
+
+  function removeStudent (student) {
+    let res = choosedStudents.findIndex((item) => {
+      return item === student;
+    });
+    if (res >= 0) {
+      choosedStudents.splice(res, 1);
+    }
+  }
+
+  function openModule (event) {
+    event.stopPropagation();
+    event.preventDefault();
+    $('#studentList').css('display', 'flex');
+  }
+
+  function closeModule () {
+    $('#studentList').css('display', 'none');
+    $('#students').empty();
+    for (var i = 0; i < choosedStudents.length; i++) {
+      $('#students').append('<div class="item"><img src="assets/btn_touxiang.png"/><p>' + choosedStudents[i] + '</p></div>');
+    }
+  }
+
+  function getBule (num, state) {
+    let arr = $('.blueFlower');
+    if (num === 1 && blueFlower === 1 && arr[0].src.match('icon_hua_blue.png')) {
+      blueFlower = 0;
+      arr[0].src = 'assets/icon_hua_gray.png';
+    } else {
+      for (let i = 0; i < arr.length; i++) {
+        if (i <= num - 1) {
+          arr[i].src = 'assets/icon_hua_blue.png';
+        } else {
+          arr[i].src = 'assets/icon_hua_gray.png';
+        }
+      }
+      blueFlower = num;
+    }
+    if (!state) {
+      getRed(0, true);
+    }
+  }
+
+  function getRed (num, state) {
+    let arr = $('.redFlower');
+    if (num === 1 && redFlower === 1 && arr[0].src.match('icon_hua_red.png')) {
+      redFlower = 0;
+      arr[0].src = 'assets/icon_hua_gray.png';
+    } else {
+      for (let i = 0; i < arr.length; i++) {
+        if (i <= num - 1) {
+          arr[i].src = 'assets/icon_hua_red.png';
+        } else {
+          arr[i].src = 'assets/icon_hua_gray.png';
+        }
+      }
+      redFlower = num;
+    }
+    if (!state) {
+      getBule(0, true);
+    }
+  }
+
+  function cancelClick (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
+  function docCloseModule (event) {
+    event.stopPropagation();
+    event.preventDefault();
+    $('#studentList').css('display', 'none');
+  };
+</script>
+</body>
+</html>

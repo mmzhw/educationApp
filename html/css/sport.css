@@ -1,0 +1,133 @@
+
+.lineEveryDay {
+  padding: 5vw 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lineEveryDay > div {
+  height: 1px;
+  width: 35%;
+  background: #cccccc;
+}
+
+.lineEveryDay p {
+  flex: 1;
+  font-size: .6rem;
+  text-align: center;
+}
+
+.signIn {
+  margin-bottom: 10vh;
+}
+
+.signIn .item {
+  width: 100%;
+  padding: 3vw;
+  height: 24vw;
+  box-sizing: border-box;
+  display: flex;
+  box-shadow:0 1px 6px 0 rgba(0,0,0,0.18);
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 5vw;
+}
+
+.signIn .item img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  padding-top: 5px;
+}
+
+.signIn .item .content {
+  flex: 1;
+}
+
+.signIn .item .content p {
+  font-size: .4rem;
+  padding: 5px 0;
+}
+
+.signIn .item .content a {
+  font-size: .4rem;
+  padding: 5px 0;
+}
+
+.signIn .item .content p {
+  color: #343434;
+}
+
+.signIn .item .content a {
+  color: #999999;
+}
+
+.signIn .item .right {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signIn .item .right > div {
+  width: 30vw;
+  height: 10vw;
+  background: #0F88FF;
+  font-size: .4rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.signIn .item.activeSign {
+  background: #DEEEFE;
+}
+
+.signIn .item.activeSign .content a {
+  color: #0F88FF;
+}
+
+.signIn .item.activeSign .right > div {
+  background: url("../assets/icon_qiandao.png") center no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+
+}
+
+.taskDes {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vw;
+  font-size: .2rem;
+}
+
+.taskDes textarea {
+  background: #F7F7F7;
+  border: 1px solid #D8D8D8;
+  width: 100%;
+}
+
+.uploadSpan {
+  font-size: .4rem;
+  padding-top: 3vw;
+}
+
+.uploadBut {
+  position: relative;
+  padding: 3vw;
+  display: inline-block;
+}
+
+.uploadBut p {
+  font-size: .3rem;
+  width: 52px;
+  text-align: center;
+}
+
+.uploadBut .fileUpload {
+  display: none;
+}
