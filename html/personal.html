@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="css/personal.css"/>
+  <script src="js/amfe-flexible.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="studentList" id="studentList" onclick="docCloseModule(event)">
+  <div onclick="cancelClick(event)">
+    <p>切换孩子</p>
+    <div class="itemWrap" id="childWrap">
+      <div onclick="chooseStudent(event, this, '1')" class="item"><p>1</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '2')" class="item"><p>2</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '3')" class="item"><p>3</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '4')" class="item"><p>4</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '4')" class="item"><p>4</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '4')" class="item"><p>4</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '4')" class="item"><p>4</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '4')" class="item"><p>4</p><img src='assets/icon_quan.png'/></div>
+      <div onclick="chooseStudent(event, this, '4')" class="item"><p>4</p><img src='assets/icon_quan.png'/></div>
+    </div>
+    <div class="sure" onclick="closeModule()">确认</div>
+  </div>
+</div>
+<div style="position: relative">
+  <div class="backHead personal">
+    <a href="JavaScript:history.back(-1);"><img src="assets/left.png"/> </a>
+    <div>我的</div>
+    <div></div>
+  </div>
+  <div class="userInfo">
+    <div class="left">
+      <img src="assets/icon_logo.png"/>
+      <div class="item"><p>监护人：</p>
+        <p>李大侠</p></div>
+      <div class="item"><p>孩&nbsp;&nbsp;&nbsp;子：</p>
+        <p>李大侠</p></div>
+      <div class="item"><p>年&nbsp;&nbsp;&nbsp;级：</p>
+        <p>一年级（3）班</p></div>
+    </div>
+    <div class="right"><img src=""/></div>
+  </div>
+</div>
+
+<div style="height: 80vw"></div>
+
+<div class="changeChild" onclick="openModule(event)">
+  <img src="assets/icon_qiehuan.png"/>
+  <p>切换孩子</p>
+  <img src="assets/btn_jiantou.png"/>
+</div>
+
+
+<div class="foot">
+  <a class="item" href="index.html"><img src="assets/menu1.png"/>
+    <p>首页</p></a>
+  <a class="item" href="sport.html"><img src="assets/menu2.png"/>
+    <p>体育</p></a>
+  <a class="item" href="evaluate.html"><img src="assets/menu3.png"/>
+    <p>评价</p></a>
+  <a class="item" href="finalExam.html"><img src="assets/menu4.png"/>
+    <p>成绩</p></a>
+  <a class="item" href="shop.html"><img src="assets/menu5.png"/>
+    <p>商城</p></a>
+  <a class="item activeFoot" href="personal.html"><img src="assets/menu6hover.png"/>
+    <p>我的</p></a>
+</div>
+<script>
+  function openModule(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    $('#studentList').css('display', 'flex');
+  }
+
+  function closeModule() {
+    $('#studentList').css('display', 'none');
+  }
+
+  function chooseStudent(event, el, student) {
+    event.stopPropagation();
+    event.preventDefault();
+    let items = $('#childWrap')[0].children;
+    for (var i = 0; i < items.length; i++) {
+      items[i].children[1].src = 'assets/icon_quan.png';
+    }
+    el.children[1].src = 'assets/btn_xuanzhong.png';
+  }
+
+  function cancelClick (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
+  function docCloseModule (event) {
+    event.stopPropagation();
+    event.preventDefault();
+    $('#studentList').css('display', 'none');
+  };
+</script>
+</body>
+</html>
