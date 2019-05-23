@@ -122,5 +122,14 @@
 }
 
 .commodity {
-
+  background: #FFE6A7;
+  width: 90vw;
+  height: 20vh;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 9;
+  margin-left: -45vw;
+  margin-bottom: -10vh;
+  border-radius: 3vw;
 }
