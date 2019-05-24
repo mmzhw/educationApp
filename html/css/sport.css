@@ -6,16 +6,29 @@
   justify-content: center;
 }
 
-.lineEveryDay > div {
-  height: 1px;
-  width: 35%;
-  background: #cccccc;
+.lineEveryDay > a {
+  width: 25vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .4rem;
+  border: 1px solid #0F88FF;
 }
 
-.lineEveryDay p {
-  flex: 1;
-  font-size: .6rem;
-  text-align: center;
+.lineEveryDay > a:nth-child(1) {
+  border-right: none;
+  border-radius: 3vw 0 0 3vw;
+}
+
+.lineEveryDay > a:nth-child(2) {
+  border-left: none;
+  border-radius: 0 3vw 3vw 0;
+}
+
+.lineEveryDay > a.dayActive {
+  background: #0F88FF;
+  color: #ffffff;
 }
 
 .signIn {
@@ -28,7 +41,7 @@
   height: 24vw;
   box-sizing: border-box;
   display: flex;
-  box-shadow:0 1px 6px 0 rgba(0,0,0,0.18);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
   background: #ffffff;
   border-radius: 10px;
   margin-bottom: 5vw;
@@ -116,9 +129,26 @@
   padding-top: 3vw;
 }
 
+.imgList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3vw;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.imgList > img {
+  width: 52px;
+  height: 52px;
+  margin-right: 3vw;
+  margin-top: 3vw;
+  background: #ffffff;
+  box-shadow: 0 0 10px #cccccc;
+}
+
 .uploadBut {
   position: relative;
-  padding: 3vw;
+  padding: 3vw 3vw 3vw 0;
   display: inline-block;
 }
 
