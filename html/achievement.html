@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <script src="js/amfe-flexible.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <style>
+
+    .swiper-container, .swiper-wrapper {
+      width: 100vw;
+      height: 100vh;
+      background: #74c9ff;
+    }
+
+    .swiper-wrapper > div {
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .swiper-wrapper > div > div {
+      height: 70vh;
+      width: 90vw;
+      margin: 30vh auto 0;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .swiper-wrapper .one {
+      background: url("assets/cjbj1.png") top center no-repeat;
+    }
+
+    .swiper-wrapper .one > div {
+      background-image: url("assets/bg_one.png");
+    }
+
+    .swiper-wrapper .two {
+      background: url("assets/cjbj2.jpg") top center no-repeat;
+    }
+
+    .swiper-wrapper .two > div {
+      margin: 10vh auto 0;
+      background-image: url("assets/bg_two.png");
+    }
+
+    .swiper-wrapper .three {
+      background: url("assets/cjbj3.jpg") top center no-repeat;
+    }
+
+    .swiper-wrapper .three > div {
+      margin: 10vh auto 0;
+      background-image: url("assets/bg_three.png");
+    }
+
+    .swiper-wrapper .four {
+      background: url("assets/cjbj4.jpg") top center no-repeat;
+    }
+
+    .swiper-wrapper .four > div {
+      margin: 20vh auto 0;
+      background-image: url("assets/bg_foure.png");
+    }
+
+    .swiper-wrapper .five {
+      background: url("assets/cjbj5.jpg") top center no-repeat;
+    }
+
+    .swiper-wrapper .five > div {
+      margin: 0 auto;
+      background-image: url("assets/bg_kuang.png");
+    }
+
+  </style>
+</head>
+<body>
+<div class="swiper-container ">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide one">
+      <div>
+      </div>
+    </div>
+    <div class="swiper-slide two">
+      <div>
+      </div>
+    </div>
+    <div class="swiper-slide three">
+      <div>
+      </div>
+    </div>
+    <div class="swiper-slide four">
+      <div>
+      </div>
+    </div>
+    <div class="swiper-slide five">
+      <div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+  });
+</script>
+</body>
+</html>
