@@ -161,3 +161,20 @@
 .uploadBut .fileUpload {
   display: none;
 }
+
+.save {
+  width: 25vw;
+  height: 8vw;
+  background: #0F88FF;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  margin-left: -12.5vw;
+  z-index: 9;
+  font-size: .4rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3vw;
+}

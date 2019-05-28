@@ -33,6 +33,7 @@
       <input type="file" id="file" class="fileUpload" onchange="getFile(this)"/>
     </div>
   </div>
+  <div class="save" onclick="save">保存</div>
 </div>
 <div class="foot">
   <a class="item" href="index.html"><img src="assets/menu1.png" /><p>首页</p></a>
@@ -51,6 +52,10 @@
     var fileObj = document.getElementById("file").files[0]; // js 获取文件对象
     var des = $('#desText').val();
     console.log(fileObj, des)
+  }
+
+  function save () {
+    //点击保存的处理
   }
 </script>
 </body>
