@@ -34,6 +34,10 @@
   color: #A6A5AA;
 }
 
+.shopFoot .item img {
+  width: 6vw;
+}
+
 .shopFoot .item.activeFoot p {
   color: #0080FF;
 }
