@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="css/chooseClass.css"/>
+  <script src="js/amfe-flexible.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="backHead">
+  <a href="JavaScript:history.back(-1);"><img src="assets/left.png"/> </a>
+  <div>选课</div>
+  <div></div>
+</div>
+
+<div class="pageWrap">
+  <div class="headTip">选课截止时间：2019.7.23 10:00-2019.7.31 24:00</div>
+  <div class="menu">
+    <div class="selectWrap">
+      <div onclick="changeSelectState()">
+        <p id="filterClassType">请选择</p>
+        <i class="triangle"></i>
+      </div>
+      <ul id="selectUlWrap" style="display: none">
+        <li onclick="chooseType(event)">全部课程</li>
+        <li onclick="chooseType(event)">校级课程</li>
+        <li onclick="chooseType(event)">年级课程</li>
+      </ul>
+    </div>
+    <div class="filter">
+      <img src="assets/chooseClass/filter.png">
+      <p>已选</p>
+    </div>
+  </div>
+  <div class="classList">
+    <a class="item" href="chooseClassDetail.html">
+      <img src="assets/chooseClass/signed.png">
+      <div class="left"><img src="assets/chooseClass/class1.png"></div>
+      <div class="right">
+        <div class="title">
+          <p>篮球（校级）</p>
+          <img src="assets/chooseClass/heart_e.png">
+        </div>
+        <p>负责人：张老师</p>
+        <p>招收对象：三-五年级学生</p>
+        <div class="textBottom">
+          <p>招收人数：40</p>
+          <p>收藏：99999</p>
+        </div>
+      </div>
+    </a>
+    <a class="item" href="chooseClassDetail.html">
+      <img src="assets/chooseClass/ended.png">
+      <div class="left"><img src="assets/chooseClass/class1.png"></div>
+      <div class="right">
+        <div class="title">
+          <p>篮球（校级）</p>
+          <img src="assets/chooseClass/heart_f.png">
+        </div>
+        <p>负责人：张老师</p>
+        <p>招收对象：三-五年级学生</p>
+        <div class="textBottom">
+          <p>招收人数：40</p>
+          <p>收藏：99999</p>
+        </div>
+      </div>
+    </a>
+    <a class="item" href="chooseClassDetail.html">
+      <img src="assets/chooseClass/ended.png">
+      <div class="left"><img src="assets/chooseClass/class1.png"></div>
+      <div class="right">
+        <div class="title">
+          <p>篮球（校级）</p>
+          <img src="assets/chooseClass/heart_f.png">
+        </div>
+        <p>负责人：张老师</p>
+        <p>招收对象：三-五年级学生</p>
+        <div class="textBottom">
+          <p>招收人数：40</p>
+          <p>收藏：99999</p>
+        </div>
+      </div>
+    </a>
+    <a class="item" href="chooseClassDetail.html">
+      <img src="assets/chooseClass/ended.png">
+      <div class="left"><img src="assets/chooseClass/class1.png"></div>
+      <div class="right">
+        <div class="title">
+          <p>篮球（校级）</p>
+          <img src="assets/chooseClass/heart_f.png">
+        </div>
+        <p>负责人：张老师</p>
+        <p>招收对象：三-五年级学生</p>
+        <div class="textBottom">
+          <p>招收人数：40</p>
+          <p>收藏：99999</p>
+        </div>
+      </div>
+    </a>
+    <a class="item" href="chooseClassDetail.html">
+      <img src="assets/chooseClass/ended.png">
+      <div class="left"><img src="assets/chooseClass/class1.png"></div>
+      <div class="right">
+        <div class="title">
+          <p>篮球（校级）</p>
+          <img src="assets/chooseClass/heart_f.png">
+        </div>
+        <p>负责人：张老师</p>
+        <p>招收对象：三-五年级学生</p>
+        <div class="textBottom">
+          <p>招收人数：40</p>
+          <p>收藏：99999</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<div class="foot">
+  <a class="item" href="index.html"><img src="assets/menu1.png"/>
+    <p>首页</p></a>
+  <a class="item" href="sport.html"><img src="assets/menu2.png"/>
+    <p>体育</p></a>
+  <a class="item" href="finalExam.html"><img src="assets/menu4.png"/>
+    <p>成绩</p></a>
+  <a class="item" href="shop.html"><img src="assets/menu5.png"/>
+    <p>商城</p></a>
+  <a class="item" href="chooseClass.html"><img src="assets/menu7_hover.png"/>
+    <p>评价</p></a>
+  <a class="item" href="personal.html"><img src="assets/menu6.png"/>
+    <p>我的</p></a>
+</div>
+<script>
+  function chooseType (event) {
+    document.getElementById('filterClassType').innerHTML = event.target.innerHTML;
+    changeSelectState();
+  }
+
+  function changeSelectState () {
+    let selectUlWrap = document.getElementById('selectUlWrap');
+    if (selectUlWrap.style.display === 'block') {
+      selectUlWrap.style.display = 'none';
+    } else {
+      selectUlWrap.style.display = 'block';
+    }
+
+  }
+</script>
+</body>
+</html>

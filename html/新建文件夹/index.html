@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css"/>
+  <script src="js/amfe-flexible.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topBg">
+    <div class="imgWrap chooseC">
+      <img src="assets/chooseClass/banner3.png">
+      <a id="check">开始选课</a>
+    </div>
+
+    <div class="ranking">
+      <div class="item"><img src='assets/icon_lvone.png'/><span>Lv1</span></div>
+      <div class="item"><img src='assets/icon_lvtwo.png'/><span>Lv2</span></div>
+      <div class="item"><img src='assets/icon_lvthree.png'/><span>Lv3</span></div>
+    </div>
+  </div>
+  <div class="listWrap">
+    <div class="listTitle">
+      <img src="assets/icon_rili.png"/>
+      <span>积分兑换</span>
+      <a>更多></a>
+    </div>
+    <div id="listSwiper">
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+        <div class='swiper-slide item'><div class='imgWrap'><img src='' /></div><p>笔记本</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="listWrap" style="margin-top: 1vh">
+    <div class="listTitle">
+      <img src="assets/icon_rili.png"/>
+      <span>积分排行</span>
+    </div>
+    <div id="singleSwiper">
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide item'>
+          <img src=''/>
+          <div class="leftText">
+            <p>士大夫</p>
+            <p>个人积分：<span>100</span>分</p>
+            <p>班级积分排名，第<span>1</span>名</p>
+          </div>
+          <div class="rightImg">1</div>
+        </div>
+
+        <div class='swiper-slide item'>
+          <img src=''/>
+          <div class="leftText">
+            <p>士大夫</p>
+            <p>个人积分：<span>100</span>分</p>
+            <p>班级积分排名，第<span>1</span>名</p>
+          </div>
+          <div class="rightImg">1</div>
+        </div>
+
+        <div class='swiper-slide item'>
+          <img src=''/>
+          <div class="leftText">
+            <p>士大夫</p>
+            <p>个人积分：<span>100</span>分</p>
+            <p>班级积分排名，第<span>1</span>名</p>
+          </div>
+          <div class="rightImg">1</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="foot">
+  <a class="item activeFoot" href="index.html"><img src="assets/menu1hover.png" /><p>首页</p></a>
+  <a class="item" href="sport.html"><img src="assets/menu2.png" /><p>体育</p></a>
+  <a class="item" href="finalExam.html"><img src="assets/menu4.png" /><p>成绩</p></a>
+  <a class="item" href="shop.html"><img src="assets/menu5.png" /><p>商城</p></a>
+  <a class="item" href="chooseClass.html"><img src="assets/menu7.png" /><p>评价</p></a>
+  <a class="item" href="personal.html"><img src="assets/menu6.png" /><p>我的</p></a>
+</div>
+<script>
+  var listSwiper = new Swiper('#listSwiper', {
+    slidesPerView: 'auto',
+    spaceBetween: '3%',
+  });
+
+  var singleSwiper = new Swiper('#singleSwiper', {
+    slidesPerView: 'auto',
+  });
+</script>
+</body>
+</html>

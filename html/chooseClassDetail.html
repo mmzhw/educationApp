@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="css/chooseClass.css"/>
+  <script src="js/amfe-flexible.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="backHead">
+  <a href="JavaScript:history.back(-1);"><img src="assets/left.png"/> </a>
+  <div>课程详情</div>
+  <div></div>
+</div>
+
+<div class="pageWrap noFoot">
+  <div class="detailHead">
+    <img src="assets/chooseClass/class1.png">
+    <div class="right">
+      <p>篮球（校级）</p>
+      <p><span>负责人：</span>张老师</p>
+      <p><span>招收对象：</span>三-五年级学生</p>
+      <div>
+        <p><span>招收人数：</span>40</p>
+        <p><span>收藏：</span>99999</p>
+      </div>
+    </div>
+  </div>
+  <div class="detailCenter">
+    <p><span>授课时间：</span>每周三下午14:30-16:30</p>
+    <p><span>上课地点：</span>一部篮球场</p>
+    <p><span>负责人联系方式：</span>12345678901</p>
+    <p><span>单位名称：</span>云南立进体育文化有限公司</p>
+  </div>
+  <div class="detailType">
+    <div id="idOne" class="activeType" onclick="getType(1)">课程介绍</div>
+    <div id="idTwo" onclick="getType(2)">师资情况</div>
+  </div>
+  <div id="detailOne" class="detailContent">课程介绍</div>
+  <div id="detailTwo" class="detailContent" style="display: none">师资情况</div>
+  <div class="signClass" onclick="signClass()">立即报名</div>
+</div>
+<script>
+  function getType (type) {
+    if (type === 1) {
+      document.getElementById('idOne').className = 'activeType';
+      document.getElementById('idTwo').className = '';
+      document.getElementById('detailOne').style.display = 'block';
+      document.getElementById('detailTwo').style.display = 'none';
+    } else if (type === 2) {
+      document.getElementById('idTwo').className = 'activeType';
+      document.getElementById('idOne').className = '';
+      document.getElementById('detailOne').style.display = 'none';
+      document.getElementById('detailTwo').style.display = 'block';
+    }
+  }
+
+  function signClass () {
+    console.log('点击报名事件');
+  }
+</script>
+</body>
+</html>
