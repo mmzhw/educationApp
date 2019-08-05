@@ -107,8 +107,16 @@
   border-radius: 1vh;
   width: 12.8vh;
   height: 12.8vh;
+  overflow: hidden;
   box-shadow: 0 0 1vw rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.listWrap #listSwiper .item .imgWrap img {
+  width: 100%;
+}
+
 .listWrap #listSwiper .item p {
   text-align: center;
   font-size: .2rem;

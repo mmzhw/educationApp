@@ -46,7 +46,7 @@
   font-size: .6rem;
   padding: 5vw 0;
   text-align: center;
-  position: fixed;
+  /*position: fixed;*/
   z-index: 9;
   top: 0;
   left: 0;
@@ -63,8 +63,8 @@
 .listGift p {
   font-size: .5rem;
   text-align: center;
-  padding-top: 20%;
-  padding-bottom: 3%;
+  padding-top: 95px;
+  padding-bottom: 10px;
 }
 
 .listGift a {
@@ -73,11 +73,10 @@
 
 .listGift .listWrap {
   margin: 0 auto;
-  width: 90vw;
-  height: 12vh;
   display: flex;
-  justify-content: space-evenly;
   padding: 0 0 2vh;
+  flex-wrap: wrap;
+  background: #ffe6a7;
 }
 
 .listGift .listWrap .item {
@@ -89,11 +88,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 1.65vw 10px;
+
 }
 
 .listGift .listWrap .item img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
 }
 
 .listGift > a {
@@ -119,7 +119,6 @@
   overflow: hidden;
   position: relative;
 }
-
 .back {
   display: block;
   padding-left: 3vw;
@@ -201,7 +200,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70vw;
+  width: 45vw;
   height: 10vw;
   color: #ffffff;
   margin: 16vh auto 0;
