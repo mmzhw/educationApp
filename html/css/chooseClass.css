@@ -9,8 +9,8 @@
 }
 
 .menu {
-  margin: 2vw 0;
-  padding: 3vw 3vw 0;
+  margin: 1.5vw 0 0.5vw;
+  padding: 2vw 3vw 0;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -47,7 +47,7 @@
 .selectWrap ul {
   position: absolute;
   left: 0;
-  top: 10vw;
+  top: 8.85vw;
   z-index: 1;
   width: 100%;
   margin: 0;
@@ -59,6 +59,11 @@
 .selectWrap ul li {
   padding: 2vw 3vw;
   border-bottom: 1px solid #F8F8F8;
+}
+
+.selectWrap ul li:nth-child(1) {
+  background:rgba(15,136,255,0.4);
+  color: #ffffff;
 }
 
 .filter {
@@ -240,4 +245,5 @@
   justify-content: center;
   align-items: center;
   border-radius: 1.5vw;
+  font-size: .6rem;
 }

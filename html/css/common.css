@@ -1,6 +1,7 @@
 li {
   list-style: none;
 }
+
 p {
   margin: 0;
   padding: 0;
@@ -136,4 +137,60 @@ a {
   padding: 0 3vw;
   box-sizing: border-box;
   width: 100vw;
+}
+
+.tip {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  transition:all 1s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tip .tipWrap {
+  border-radius: 3vw;
+  width: 60vw;
+  height: 30vw;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip .tipContent {
+  flex: 1;
+  font-size: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+}
+.tip .tipFoot {
+  height: 10vw;
+  font-size: .4rem;
+  display: flex;
+}
+
+.tip .tipFoot > div {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.tip .tipFoot > div:nth-child(1) {
+  border-right: 1px solid #cccccc;
+}
+
+.tip .tipFoot > div.oneTip {
+  border: none;
 }

@@ -9,8 +9,28 @@
   <link rel="stylesheet" type="text/css" href="css/chooseClass.css"/>
   <script src="js/amfe-flexible.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/alert.js"></script>
 </head>
 <body>
+<div class="tip" id="alertTip">
+  <div class="tipWrap">
+    <div class="tipContent">报名成功</div>
+    <div class="tipFoot">
+      <div class="oneTip" onclick="hideTipClick()">确定</div>
+    </div>
+  </div>
+</div>
+
+<div class="tip" id="sureTip">
+  <div class="tipWrap">
+    <div class="tipContent">是否确认报名此课程</div>
+    <div class="tipFoot">
+      <div onclick="sureTipClick()">确定</div>
+      <div onclick="hideTipClick()">取消</div>
+    </div>
+  </div>
+</div>
+
 <div class="backHead">
   <a href="JavaScript:history.back(-1);"><img src="assets/left.png"/> </a>
   <div>课程详情</div>
@@ -45,6 +65,9 @@
   <div class="signClass" onclick="signClass()">立即报名</div>
 </div>
 <script>
+  let sureTip = document.getElementById('sureTip');
+  let alertTip = document.getElementById('alertTip');
+
   function getType (type) {
     if (type === 1) {
       document.getElementById('idOne').className = 'activeType';
@@ -61,7 +84,27 @@
 
   function signClass () {
     console.log('点击报名事件');
+
+    sureTip.style.visibility = 'visible';
+    sureTip.style.opacity = '1';
+
   }
+
+  function hideTipClick () {
+    sureTip.style.visibility = 'hidden';
+    sureTip.style.opacity = '0';
+    alertTip.style.visibility = 'hidden';
+    alertTip.style.opacity = '0';
+  }
+
+  function sureTipClick () {
+    sureTip.style.visibility = 'hidden';
+    sureTip.style.opacity = '0';
+
+    alertTip.style.visibility = 'visible';
+    alertTip.style.opacity = '1';
+  }
+
 </script>
 </body>
 </html>
