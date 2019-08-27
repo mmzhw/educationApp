@@ -1,0 +1,264 @@
+
+#thirdContent {
+  width: 100%;
+  padding: 20px 3vw 3vw;
+  padding-bottom: 8vh;
+  box-sizing: border-box;
+}
+
+#thirdContent .item {
+  background: #ECF6FC;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
+  width: 100%;
+  height: 35vw;
+  display: flex;
+  font-size: .5rem;
+  padding: 2vw;
+  box-sizing: border-box;
+  border-radius: 3vw;
+  position: relative;
+  margin-bottom: 3vw;
+}
+
+#thirdContent .item > img {
+  position: absolute;
+  right: 3vw;
+  top: 0;
+  z-index: 2;
+  width: 10vw;
+}
+
+#thirdContent .item .left {
+  width: 31vw;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16vw;
+  margin-right: 3vw;
+}
+
+#thirdContent .item .left img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#thirdContent .item .right {
+  font-size: .35rem;
+  height: 100%;
+  padding: 2vw 0;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #6A6A6A;
+}
+
+#thirdContent .item .right .title {
+  font-size: .45rem;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-weight: bold;
+}
+
+#thirdContent .item .right .title > img {
+  width: 7vw;
+  height: 7vw;
+}
+
+#thirdContent .item .right .gold {
+  display: flex;
+  align-items: center;
+}
+
+#thirdContent .item .right .gold > p{
+  color: #E93737;
+  font-size: .6rem;
+}
+
+#thirdContent .item .right .gold > span {
+  margin-left: 2vw;
+  background: url("../assets/wdjf_icon_gold_defa.png") center no-repeat;
+  width: 5vw;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DF8902;
+  font-size: .4rem;
+  border-radius: 5vw;
+}
+
+.shopHead {
+  border-bottom: 1px solid #F5F5F5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.shopHead .item {
+  font-size: .42rem;
+  color: #999999;
+  line-height: 40px;
+  position: relative;
+}
+
+.shopHead .item > div {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 1px;
+  background: #0F88FF;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+.shopHead .item.itemActive {
+  color: #0F88FF;
+}
+
+.shopHead .item.itemActive > div {
+  display: block;
+}
+
+#secondContent {
+  padding-top: 20px;
+}
+
+#secondContent .item {
+  display: flex;
+  height: 40px;
+  margin: 0 20px 10px;
+}
+
+#secondContent .item > div {
+  width: 7px;
+  background: #1ABF63;
+  border-radius: 8px 0 0 8px;
+}
+
+#secondContent .item > p {
+  flex: 1;
+  background: #ECF6FC;
+  font-size: .35rem;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#firstContent {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 5vw 0;
+}
+
+#firstContent .item {
+  display: block;
+  box-sizing: border-box;
+  width: 30vw;
+  padding: 0 2.5vw;
+}
+
+#firstContent .item > div {
+  width: 25vw;
+  height: 25vw;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#firstContent .item > div > img {
+  width: 100%;
+}
+
+#firstContent .item > p {
+  font-size: .35rem;
+  text-align: center;
+  line-height: 30px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333333;
+}
+
+
+.commodity {
+  background: #ECF6FC;
+  width: 90vw;
+  height: 20vh;
+  border-radius: 3vw;
+  display: flex;
+  align-items: center;
+  margin: 5vw auto;
+}
+
+.commodity .left {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 15vw;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  margin-left: 5vw;
+}
+
+.commodity .left img {
+  width: 100%;
+}
+
+.commodity .right {
+  flex: 1;
+  padding: 0 5vw;
+  color: #666666;
+}
+
+.commodity .right p {
+  font-size: .5rem;
+  padding: 3vw 0;
+}
+
+.commodity .right > div {
+  display: flex;
+  align-items: center;
+}
+
+.commodity .right > div p:nth-child(1) {
+  font-size: .5rem;
+}
+
+.commodity .right > div p:nth-child(2) {
+  color: #E93737;
+  font-size: .6rem;
+}
+
+.commodity .right > div > div {
+  margin-left: 2vw;
+  background: url("../assets/wdjf_icon_gold_defa.png") center no-repeat;
+  width: 5vw;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DF8902;
+  font-size: .4rem;
+  border-radius: 5vw;
+}
+
+.exchange {
+  background: #0F88FF;
+  font-size: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 10vw;
+  color: #ffffff;
+  margin: 0 auto;
+  border-radius: 2vw;
+}
