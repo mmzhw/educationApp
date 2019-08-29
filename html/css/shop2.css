@@ -73,7 +73,7 @@
   align-items: center;
 }
 
-#thirdContent .item .right .gold > p{
+#thirdContent .item .right .gold > p {
   color: #E93737;
   font-size: .6rem;
 }
@@ -187,11 +187,9 @@
   color: #333333;
 }
 
-
 .commodity {
   background: #ECF6FC;
   width: 90vw;
-  height: 20vh;
   border-radius: 3vw;
   display: flex;
   align-items: center;
@@ -205,7 +203,7 @@
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
   background: #ffffff;
-  margin-left: 5vw;
+  margin: 5vw 0 5vw 5vw;
 }
 
 .commodity .left img {
@@ -220,7 +218,11 @@
 
 .commodity .right p {
   font-size: .5rem;
-  padding: 3vw 0;
+  padding: 5px 0;
+}
+
+.commodity .right p:nth-child(1) {
+  font-weight: bold;
 }
 
 .commodity .right > div {
